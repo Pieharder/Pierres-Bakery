@@ -13,9 +13,11 @@ This project has been created to allow a user to make puchases of bread and past
 
 | Specification | Example Input | Example Output |
 | :-----------: |:------------: | :------------: |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| User will be greeted with welcome message | *Start Program* | "Welcome to Pierre's Bakery!" |
+| User will be given prices of bread and pastries | *Start Program* | "Today's fresh baked bread cost $5 per loaf and todays pastries are a mere $2!" |
+| Display special offers to user | *Start Program* | "Today's specials include: Buy 2 get 1 free on Bread and 3 pastries for $5!" |
+| Allow user to input the number of bread loaves and or pastries they would like to buy | 3 bread loaves | your total will be $10 today! |
+
 
 
 
