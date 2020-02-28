@@ -9,13 +9,13 @@ namespace Bakery.Models
 
     public Pastry()
     {
-      Price = 5;
+      Price = 2;
     }
     public static void PastryPricing()
     {
-      Console.WriteLine("Please enter the number of loaves you would like:");
-      string breadCount = Console.ReadLine();
-      int.Parse(breadCount);
+      Console.WriteLine("Please enter the number of pastries you would like:");
+      string pastryCount = Console.ReadLine();
+      int.Parse(pastryCount);
     }
   }
 }
