@@ -38,12 +38,16 @@ namespace Bakery
       
       if (productChoice.ToLower() == "bread")
       {
-        Bread.BreadPricing();
+        Console.WriteLine("Please enter the number of loaves you would like:");
+        int breadCount = int.Parse(Console.ReadLine());
+        Console.WriteLine("You have ordered " + breadCount + " loaves!");
         ReturnMenu();
       }
       else if (productChoice.ToLower() == "pastry")
       {
-        Pastry.PastryInput();
+        Console.WriteLine("Please enter the number of pastries you would like:");
+        int pastryCount = int.Parse(Console.ReadLine());
+        Console.WriteLine("You have ordered " + pastryCount + " pastries!");
         ReturnMenu();
       }
       else
@@ -57,13 +61,21 @@ namespace Bakery
       Console.WriteLine("Would you like to purchase anything else?");
       Console.WriteLine("[YES] [NO]");
       string backToMenu = Console.ReadLine();
+      if (backToMenu.ToLower() == "yes")
+      {
+        Shop();
+      }
+      else
+      {
+        Checkout();
+      }
+
     }
 
     public static void Checkout()
     {
-      Pastry.PastryPrice();
       Console.WriteLine("Your total today is:");
-      
+      // Console.WriteLine(Pastry.PastryPrice(int pastryCount));
     }
   }
 }
