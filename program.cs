@@ -10,7 +10,8 @@ namespace Bakery
       Console.Clear();
       Console.WriteLine("Welcome to Pierre's World Class Bakery!");
       Console.WriteLine("Today we have Fresh baked loaves of bread for a mere price of $5! We also have yummy pastries for $2!");
-      Console.WriteLine("Today's specials are buy 2 get 1 free on bread as well as 3 pastries for $5!");
+      Console.WriteLine("Today's specials are buy 2 get 1 free on bread as well as 3 pastries for $5!*");
+      Console.WriteLine("*Promotion pricing is limit, to one promo per customer.");
       Console.WriteLine("Would you like to shop?");
       Console.WriteLine("[SHOP] [EXIT]");
       string shopStatus = Console.ReadLine();
@@ -38,10 +39,12 @@ namespace Bakery
       if (productChoice.ToLower() == "bread")
       {
         Bread.BreadPricing();
+        ReturnMenu();
       }
       else if (productChoice.ToLower() == "pastry")
       {
-        Pastry.PastryPricing();
+        Pastry.PastryInput();
+        ReturnMenu();
       }
       else
       {
@@ -58,7 +61,9 @@ namespace Bakery
 
     public static void Checkout()
     {
-
+      Pastry.PastryPrice();
+      Console.WriteLine("Your total today is:");
+      
     }
   }
 }
