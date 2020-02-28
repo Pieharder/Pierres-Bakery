@@ -12,6 +12,22 @@ namespace Bakery
       Console.WriteLine("Please Enter which you would like to buy:");
       Console.WriteLine("[BREAD] [PASTRY]");
       string productChoice = Console.ReadLine();
+      if (productChoice.ToLower() == "bread")
+      {
+        Console.WriteLine("Please enter the number of loaves you would like:");
+        Console.ReadLine();
+        Console.WriteLine("Would you like to purchase anything else?");
+        Console.WriteLine("[YES] [NO]");
+        string backToMenu = Console.ReadLine();
+      }
+      else if (productChoice.ToLower() == "Pastry")
+      {
+        Console.WriteLine("Please enter the number of pastries you would like:");
+        Console.ReadLine();
+        Console.WriteLine("Would you like to purchase anything else?");
+        Console.WriteLine("[YES] [NO]");
+        string backToMenu = Console.ReadLine();
+      }
     }
   }
 }
