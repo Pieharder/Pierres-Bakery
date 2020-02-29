@@ -4,10 +4,10 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    public int Price { get; set; }
-    public int Count { get; set; }
+    public int PPrice { get; set; }
+    public int PCount { get; set; }
 
-    public static void PastryPrice(int pastryCount)
+    public static void PastryPricing(int pastryCount)
     {
       if (pastryCount == 3)
       {

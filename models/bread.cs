@@ -4,13 +4,18 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public int BreadPrice { get; set; }
-    public int BreadCount { get; set; }
-    public static void BreadPricing()
+    public int BPrice { get; set; }
+    public int BCount { get; set; }
+    public static void BreadPricing(int breadCount)
     {
-      Console.WriteLine("Please enter the number of loaves you would like:");
-      string breadCount = Console.ReadLine();
-      int.Parse(breadCount);
+      if (breadCount == 3)
+      {
+        int breadFinal = (breadCount * 2) - 1;
+      }
+      else
+      {
+        int breadFinal = breadCount * 2;
+      }
     }
   }
 }
