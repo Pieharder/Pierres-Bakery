@@ -5,6 +5,7 @@ namespace Bakery
 {
   public class Program
   {
+    PastryPrice();
     public static void Main()
     {
       Console.Clear();
@@ -72,10 +73,10 @@ namespace Bakery
 
     }
 
-    public static void Checkout()
+    public static void Checkout(int PastryPrice)
     {
       Console.WriteLine("Your total today is:");
-      // Console.WriteLine(Pastry.PastryPrice(int pastryCount));
+      Console.WriteLine(PastryPrice);
     }
   }
 }
