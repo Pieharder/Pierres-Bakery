@@ -32,6 +32,7 @@ namespace Bakery
 
     public static void Shop()
     {
+      Console.Clear();
       Console.WriteLine("Please Enter which you would like to buy:");
       Console.WriteLine("[BREAD] [PASTRY]");
       string productChoice = Console.ReadLine();
@@ -58,16 +59,6 @@ namespace Bakery
       }
     }
 
-    public static void BreadOrder()
-    {
-
-    }
-
-  public static void PastryOrder()
-    {
-      
-    }
-
     public static void ReturnMenu()
     {
       Console.WriteLine("Would you like to purchase anything else?");
@@ -81,13 +72,15 @@ namespace Bakery
       {
         Checkout();
       }
-
     }
 
     public static void Checkout()
     {
       Console.WriteLine("Your total today is:");
-      Console.WriteLine("$" + Pastry.PPrice + Bread.BPrice + ".00");
+
+      int finalPricing = Pastry.PPrice + Bread.BPrice;
+
+      Console.WriteLine("$" + finalPricing + ".00");
 
     }
   }
