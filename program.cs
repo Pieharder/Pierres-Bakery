@@ -5,7 +5,6 @@ namespace Bakery
 {
   public class Program
   {
-    PastryPrice();
     public static void Main()
     {
       Console.Clear();
@@ -42,6 +41,7 @@ namespace Bakery
         Console.WriteLine("Please enter the number of loaves you would like:");
         int breadCount = int.Parse(Console.ReadLine());
         Console.WriteLine("You have ordered " + breadCount + " loaves!");
+        Bread.BreadPricing(breadCount);
         ReturnMenu();
       }
       else if (productChoice.ToLower() == "pastry")
@@ -49,12 +49,23 @@ namespace Bakery
         Console.WriteLine("Please enter the number of pastries you would like:");
         int pastryCount = int.Parse(Console.ReadLine());
         Console.WriteLine("You have ordered " + pastryCount + " pastries!");
+        Pastry.PastryPricing(pastryCount);
         ReturnMenu();
       }
       else
       {
         Shop();
       }
+    }
+
+    public static void BreadOrder()
+    {
+
+    }
+
+  public static void PastryOrder()
+    {
+      
     }
 
     public static void ReturnMenu()
@@ -73,10 +84,11 @@ namespace Bakery
 
     }
 
-    public static void Checkout(int PastryPrice)
+    public static void Checkout()
     {
       Console.WriteLine("Your total today is:");
-      Console.WriteLine(PastryPrice);
+      Console.WriteLine("$" + Pastry.PPrice + Bread.BPrice + ".00");
+
     }
   }
 }
