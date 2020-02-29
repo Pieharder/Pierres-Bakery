@@ -1,5 +1,3 @@
-using System;
-
 namespace Bakery.Models
 {
   public class Bread
@@ -9,13 +7,14 @@ namespace Bakery.Models
     public static void BreadPricing(int Count)
     {
       BCount = Count;
+
       if (BCount >= 3)
       {
-        int BPrice = (BCount * 5) - 5;
+        BPrice = (BCount * 5) - 5;
       }
       else
       {
-        int BPrice = BCount * 5;
+        BPrice = BCount * 5;
       }
     }
   }
