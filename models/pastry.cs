@@ -4,18 +4,19 @@ namespace Bakery.Models
 {
   public class Pastry
   {
-    public int PPrice { get; set; }
-    public int PCount { get; set; }
+    public static int PPrice { get; set; }
+    public static int PCount { get; set; }
 
-    public static void PastryPricing(int pastryCount)
+    public static void PastryPricing(int Count)
     {
-      if (pastryCount == 3)
+      PCount = Count;
+      if (PCount >= 3)
       {
-        int pastryFinal = (pastryCount * 2) - 1;
+        PPrice = (PCount * 2) - 1;
       }
       else
       {
-        int pastryFinal = pastryCount * 2;
+        PPrice = PCount * 2;
       }
     }
   }
